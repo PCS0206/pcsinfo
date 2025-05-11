@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #0066cc;
+}
+
+.search input {
+  padding: 5px 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+}
+
+nav {
+  display: none;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+h1 {
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #0066cc;
+  margin-top: 30px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.infobox {
+  float: right;
+  width: 250px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.infobox img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.infobox th,
+.infobox td {
+  border: 1px solid #ccc;
+  padding: 4px;
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+ul.indent {
+  padding-left: 20px;
+}
