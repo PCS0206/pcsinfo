@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>커스텀 자기소개 링크</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      background-color: #f9f9f9;
+    }
+    .page-wrapper {
+      display: flex;
+      width: 100%;
+      margin-right: 340px;
+    }
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+    .product-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .product-subtitle {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .product-image {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+    .product-description {
+      line-height: 1.8;
+      color: #333;
+    }
+    .purchase-box {
+      width: 300px;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-bottom: 20px;
+    }
+    .buy-button {
+      width: 100%;
+      padding: 14px;
+      background-color: #03c75a;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .buy-button:hover {
+      background-color: #02b14d;
+    }
+    input, label, select {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .account-box {
+      display: none;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #444;
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .checkbox {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .checkbox input {
+      width: auto;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+  <div class="content">
+    <div class="product-title">커스텀 자기소개 링크</div>
+    <div class="product-subtitle">나 자신을 더욱 특별하게 소개하세요.</div>
+    <img class="product-image" src="https://i.ibb.co/8t7sZ5m/001.png" alt="상품 이미지">
+
+    <div class="product-description">
+      <p><strong>커스텀 자기소개 링크</strong>는 저렴한 가격에 특별한 자기소개를 하실 수 있도록 도와드립니다.</p>
+      <ul>
+        <li>✅ <strong>링크 하나로</strong> 나 자신의 모든 정보를 보여주세요.</li>
+        <li>✅ <strong>개인, 기업, 단체등</strong> 누구나 간편하고 확실하게</li>
+        <li>✅ <strong>한 눈에 보이는</strong> 나 자신!</li>
+      </ul>
+      <p>틀은 기본적으로 유지됩니다.</p>
+      <div style="height: 1000px;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="purchase-box">
+  <h3>구매신청</h3>
+  <div class="price" id="price">₩5,000</div>
+  <select id="currency" onchange="updateAccountInfo()">
+    <option value="KRW">한국 원 (₩)</option>
+    <option value="CAD">캐나다 달러 (CA$)</option>
+  </select>
+  <input type="text" id="buyer" placeholder="구매자 이름">
+  <input type="text" id="phone" placeholder="연락처 (전화번호)">
+  <input type="text" id="kakao" placeholder="카카오톡 ID">
+  <div class="checkbox">
+    <input type="checkbox" id="watermark" onchange="updatePrice()">
+    <label for="watermark">워터마크 제거 (+5,000원 / +CA$5)</label>
+  </div>
+  <button class="buy-button" onclick="buyNow()">구매 신청하기</button>
+  <div class="account-box" id="accountBox">
+    입금 계좌: 국민은행 123456-78-910111 (예금주: 루피카게임즈)
+  </div>
+</div>
+
+<script>
+function updatePrice() {
+  const currency = document.getElementById('currency').value;
+  const watermarkChecked = document.getElementById('watermark').checked;
+  if (currency === 'KRW') {
+    const basePrice = 5000;
+    const extra = watermarkChecked ? 5000 : 0;
+    const total = basePrice + extra;
+    document.getElementById('price').innerText = `₩${total.toLocaleString()}`;
+  } else {
+    const basePrice = 5;
+    const extra = watermarkChecked ? 5 : 0;
+    const total = (basePrice + extra).toFixed(2);
+    document.getElementById('price').innerText = `CA$${total}`;
+  }
+}
+
+function updateAccountInfo() {
+  const currency = document.getElementById('currency').value;
+  const box = document.getElementById('accountBox');
+  if (currency === 'KRW') {
+    box.innerText = '입금 계좌: 국민은행 813601-01-414977 (예금주: 박채성)';
+  } else {
+    box.innerText = 'e-Transfer 이메일: parkchaesung0206@gmail.com (Chaesung Park)';
+  }
+  updatePrice();
+}
+
+function buyNow() {
+  const name = document.getElementById('buyer').value;
+  const phone = document.getElementById('phone').value;
+  const kakao = document.getElementById('kakao').value;
+  const watermark = document.getElementById('watermark').checked ? "예" : "아니오";
+  const currency = document.getElementById('currency').value;
+  const totalPrice = document.getElementById('price').innerText;
+
+  if (!name || !phone || !kakao) {
+    alert("모든 정보를 입력해주세요.");
+    return;
+  }
+
+  document.getElementById("accountBox").style.display = 'block';
+
+  fetch('https://discordapp.com/api/webhooks/1370926182421500005/SoGmhbcGaeo0DIKpKWsbHhERbminkB56p90gSW6NkhY7AK2CQNNgTwBUKtQjwur8TqRB', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      username: "새 구매자 알림",
+      embeds: [
+        {
+          title: "📦 커스텀 자기소개 링크 구매 요청",
+          color: 3447003,
+          fields: [
+            { name: "구매자 이름", value: name, inline: true },
+            { name: "전화번호", value: phone, inline: true },
+            { name: "카카오톡 ID", value: kakao, inline: true },
+            { name: "워터마크 제거", value: watermark, inline: true },
+            { name: "결제 통화", value: currency === 'KRW' ? '한국 원 (₩)' : '캐나다 달러 (CA$)', inline: true },
+            { name: "총 결제금액", value: totalPrice, inline: true }
+          ],
+          footer: { text: "웹훅 알림 시스템" },
+          timestamp: new Date()
+        }
+      ]
+    })
+  });
+}
+</script>
+
+</body>
+</html>
