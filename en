@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Myinfo - Chaesung Park</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <select id="languageSelector" style="position: fixed; bottom: 20px; right: 10px; z-index: 999;" onchange="location.href=this.value">
+      <option value="index.html">🇰🇷 Korean</option>
+      <option value="index-en.html">🇺🇸 English</option>
+    </select>
+    <div class="logo">Myinfo</div>
+    <div class="search">
+        <!--<a href="#" target="_blank">Do you need a personal introduction website like this?</a>-->
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <h1>Chaesung Park</h1>
+      <div class="infobox">
+        <img src="https://i.ibb.co/Z1MKBTbb/Kakao-Talk-20250704-180308564.jpg" alt="Profile" />
+        <table>
+          <tr>
+            <th>Name</th>
+            <td>Chaesung Park</td>
+          </tr>
+          <tr>
+            <th>Location</th>
+            <td>Halifax, Canada</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>Male</td>
+          </tr>
+          <tr>
+            <th>Date of Birth</th>
+            <td>Feb. 6, 2006</td>
+          </tr>
+          <tr>
+            <th>MBTI</th>
+            <td>ENTP</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Brief Introduction</h2>
+      <p>Hello. Yes, it's me. I'm not very interested in coding, but these days AI is pretty impressive.</p>
+
+      <h2>Major / Certifications / Currently Studying</h2>
+      <p>✈️ Aviation (Major, Studying)</p>
+      <p>🔫 PAL Licence (Studying)</p>
+      <p>🛥️ Boat Licence (Acquired)</p>
+
+      <h2>Hobbies / Favorites</h2>
+      <ul class="indent">
+        <li><strong>🎲 Games</strong></li>
+        <p>Tom Clancy's Rainbow Six® Siege X</p>
+        <p>Grand Theft Auto V</p>
+        <p>Forza Horizon 5</p>
+        <p>Chess</p>
+        <p>Xplane 11/12</p>
+        <li><strong>⛺ Camping</strong></li>
+        <p>Car camping</p>
+        <li><strong>🥘 Food</strong></li>
+        <p>Five Guys</p>
+        <p>Poutine</p>
+        <p>Gamjatang (Pork Bone Soup)</p>
+        <p>Pad Thai</p>
+      </ul>
+
+      <h2>Bucket List</h2>
+      <ul class="indent">
+        <li><input type="checkbox" id="item1" name="item1" checked class="readonly-checkbox">
+            <label for="item1">Get my first job</label></li>
+        <li><input type="checkbox" id="item2" name="item2" checked class="readonly-checkbox">
+            <label for="item2">Become independent</label></li>
+        <li><input type="checkbox" id="item3" name="item3" checked class="readonly-checkbox">
+            <label for="item3">Buy my first car</label></li>
+        <li><input type="checkbox" id="item4" name="item4" class="readonly-checkbox">
+            <label for="item4">Obtain pilot license</label></li>
+        <li><input type="checkbox" id="item5" name="item5" class="readonly-checkbox">
+            <label for="item5">Graduate from university</label></li>
+        <li><input type="checkbox" id="item6" name="item6" class="readonly-checkbox">
+            <label for="item6">Get a job at any airline</label></li>
+        <li><input type="checkbox" id="item7" name="item7" class="readonly-checkbox">
+            <label for="item7">Get a job at a U.S. airline</label></li>
+        <li><input type="checkbox" id="item8" name="item8" class="readonly-checkbox">
+            <label for="item8">Obtain U.S. permanent residency</label></li>
+        <li><input type="checkbox" id="item9" name="item9" class="readonly-checkbox">
+            <label for="item9">Own my own home</label></li>
+      </ul>
+
+      <h2>Owned Vehicle</h2>
+        <h3><strong>Honda Civic 8th Generation</strong></h3>
+        <img src="https://i.ibb.co/qFpNChSm/Chat-GPT-Image-Jul-4-2025-08-15-45-PM.png" alt="HondaCivic" border="0" width="25%">
+        <strong><p>Manufacturer: Honda</p></strong>
+        <strong><p>Country of Manufacture: Canada</p></strong>
+        <p>It’s an old junk car, but it’s my first car, so I treat it very carefully.<br>
+           To keep maintenance costs low, I do simple repairs myself<br>
+           (Backup Camera, Engine Oil, Tires, etc.)</p>
+
+      <h2>Residence</h2>
+        <h3><strong>Halifax, NS, Canada</strong></h3>
+        <img src="https://i.ibb.co/gFSd7YXD/Chat-GPT-Image-Jul-11-2025-12-39-07-AM.png" alt="Home" border="0" width="25%">
+        <strong><p>One room in a house</p></strong>
+        <strong><p>Rent: $700/month</p></strong>
+        <p>Living with 7 people in one house<br>
+           Close to work, so commuting is convenient<br>
+           Even though it’s close, I still use a car to get around</p>
+        
+        
+      <h2>Related Links</h2>
+      <ul class="indent">
+        <li><a href="https://www.paypal.com/paypalme/pcs0206" target="_blank">Paypal</a></li>
+        <li><a href="https://open.spotify.com/playlist/1wi6xV3sxSHlf0HYgfRklc?si=p7xAaj0lTUOzKasH_pszyg" target="_blank">Spotify</a></li>
+        <li><a href="https://open.kakao.com/o/sRxX5Lvh" target="_blank">KakaoTalk</a></li>
+      </ul>
+
+      <div class="clear"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
