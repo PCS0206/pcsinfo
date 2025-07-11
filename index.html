@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Myinfo - AidenPark</title>
+  <title>Myinfo - Chaesung Park</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
+    <select id="languageSelector" style="position: fixed; bottom: 20px; right: 10px; z-index: 999;" onchange="location.href=this.value">
+      <option value="index.html">🇰🇷 한국어</option>
+      <option value="index-en.html">🇺🇸 English</option>
+    </select>
     <div class="logo">Myinfo</div>
     <div class="search">
-        <a href="http://site.pcsinfo.kro.kr/sale" target="_blank">이런 자기소개 사이트가 필요하신가요?</a>
+        <!--<a href="#" target="_blank">이런 자기소개 사이트가 필요하신가요?</a>-->
     </div>
   </header>
 
@@ -18,15 +22,15 @@
     <main>
       <h1>박채성</h1>
       <div class="infobox">
-        <img src="https://i.ibb.co/RGLvRjbD/Chat-GPT-Image-May-3-2025-04-09-57-PM.png" alt="프로필" />
+        <img src="https://i.ibb.co/Z1MKBTbb/Kakao-Talk-20250704-180308564.jpg" alt="프로필" />
         <table>
           <tr>
             <th>이름</th>
             <td>박채성</td>
           </tr>
           <tr>
-            <th>국가</th>
-            <td>캐나다</td>
+            <th>거주지</th>
+            <td>Halifax, Canada</td>
           </tr>
           <tr>
             <th>성별</th>
@@ -36,28 +40,79 @@
             <th>생년월일</th>
             <td>Feb.6, 2006</td>
             </tr>
+          <tr>
+            <th>MBTI</th>
+            <td>ENTP</td>
+            </tr>
         </table>
       </div>
 
       <h2>간단한 소개</h2>
-      <p>캐나다에 거주하고 있는 박채성이라고 합니다.</p>
+      <p>안녕하세요. 네. 저에요 코딩에는 그닥 흥미 없지만, 요즘 AI가 잘 나오더라구요</p>
 
-      <h2>취미</h2>
+      <h2>전공 / 자격증 / 공부중</h2>
+      <p>✈️ Aviation (전공, 공부중)</p>
+      <p>🔫 PAL Licence (공부중)</p>
+      <p>🛥️ Boat Licence (취득)</p>
+
+      <h2>취미 / 좋아하는 것</h2>
       <ui class="indent">
-        <li><strong>🎲 Chess</strong></li>
-        <p>Fide에 등록되어, 오프라인 모임에도 종종 참석하곤 합니다.</p>
-        <li><strong>🎹 Piano</strong></li>
-        <p>잘은 치지 못하지만, 취미로서 열심히 치고 있답니다.</p>
-        <li><strong>🎈 Game</strong></li>
-        <p>스팀게임 , 닌텐도 스위치 , 모바일 게임을 주로 하고 있습니다.</p>
+        <li><strong>🎲 Game</strong></li>
+        <p>Tom Clancy's Rainbow Six® Siege X</p>
+        <p>Grand Theft Auto V</p>
+        <p>Forza Horizon 5</p>
+        <p>Chess</p>
+        <p>Xplane 11/12</p>
+        <li><strong>⛺ Camping</strong></li>
+        <p>차박</p>
+        <li><strong>🥘 Food</strong></li>
+        <p>Five guys</p>
+        <p>푸틴</p>
+        <p>감자탕</p>
+        <p>팟타이</p>
       </ui>
 
-      <h2>보유자격증</h2>
-        <h3><strong>Pleasure Craft Operator Card</strong></h3><br>
-        <a href="https://ibb.co/W42jKYvw">
-        <img src="https://i.ibb.co/NdybYH2P/Kakao-Talk-20250510-222947898-01.jpg" alt="Kakao-Talk-20250510-222947898-01" border="0" width="25%">
-        </a>
+      <h2>버킷리스트</h2>
+      <ui class="indent">
+        <input type="checkbox" id="scales" name="scales" checked class="readonly-checkbox">
+        <label for="scales">첫 일자리 구하기</label><br>
+        <input type="checkbox" id="scales" name="scales" checked class="readonly-checkbox">
+        <label for="scales">독립하기</label><br>
+        <input type="checkbox" id="scales" name="scales" checked class="readonly-checkbox">
+        <label for="scales">첫차 구매하기</label><br>
+        <input type="checkbox" id="scales" name="scales" class="readonly-checkbox">
+        <label for="scales">조종면장 취득하기</label><br>
+        <input type="checkbox" id="scales" name="scales" class="readonly-checkbox">
+        <label for="scales">대학교 졸업하기</label><br>
+        <input type="checkbox" id="scales" name="scales" class="readonly-checkbox">
+        <label for="scales">아무항공사 취업하기</label><br>
+        <input type="checkbox" id="scales" name="scales" class="readonly-checkbox">
+        <label for="scales">미국항공사 취업하기</label><br>
+        <input type="checkbox" id="scales" name="scales" class="readonly-checkbox">
+        <label for="scales">미국영주권 취득하기</label><br>
+        <input type="checkbox" id="scales" name="scales" class="readonly-checkbox">
+        <label for="scales">내집마련</label><br>
+      </ui>
 
+      <h2>보유차량</h2>
+        <h3><strong>Honda Civic 8th</strong></h3>
+        <img src="https://i.ibb.co/qFpNChSm/Chat-GPT-Image-Jul-4-2025-08-15-45-PM.png" alt="HondaCivic" border="0" width="25%">
+        <strong><p>제조사 : 혼다</p></strong>
+        <strong><p>제조국 : 캐나다</p></strong>
+        <p>오래된 썩차지만, 첫차라 매우 소중히 다루는중..<br>
+           저렴하게 관리하고자 간단한 정비는 DIY로 진행<br>
+        (Backup Camera , Engine Oil , Tire Etc..)</p>
+
+      <h2>거주지</h2>
+        <h3><strong>Halifax, NS, Canada</strong></h3>
+        <img src="https://i.ibb.co/gFSd7YXD/Chat-GPT-Image-Jul-11-2025-12-39-07-AM.png" alt="Home" border="0" width="25%">
+        <strong><p>하우스의 방 하나</p></strong>
+        <strong><p>월세 : $700/월</p></strong>
+        <p>7명에서 한집에 삶<br>
+           일이랑 가까워서 출근하기 편함<br>
+        가까워도 차타고 다님</p>
+        
+        
       <h2>관련사이트</h2>
       <ul class="indent">
         <li><a href="https://www.paypal.com/paypalme/pcs0206" target="_blank">Paypal</a></li>
